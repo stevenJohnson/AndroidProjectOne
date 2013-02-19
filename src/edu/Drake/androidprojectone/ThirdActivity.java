@@ -1,5 +1,5 @@
 package edu.Drake.androidprojectone;
-
+//comments by nate allison
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
