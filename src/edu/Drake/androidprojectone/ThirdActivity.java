@@ -1,15 +1,31 @@
 package edu.Drake.androidprojectone;
-//comments by nate allison
+
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class ThirdActivity extends Activity {
+
+	Button trollScreen;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_third);
+		
+		trollScreen = (Button) findViewById(R.id.button1);
+        trollScreen.setOnClickListener(new OnClickListener(){
+        	@Override
+        	public void onClick(View v)
+        	{
+        		Intent intent = new Intent(v.getContext(), MainActivity.class);
+        		startActivity(intent);
+        	}
+        });
 	}
 
 	@Override
@@ -18,5 +34,4 @@ public class ThirdActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_third, menu);
 		return true;
 	}
-
 }
